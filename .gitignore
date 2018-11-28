@@ -47,3 +47,4 @@ packages/modules/lib
 .idea/workspace.xml
 .idea/libraries/web_node_modules.xml
 .idea/jsLibraryMappings.xml
+.DS_Store
