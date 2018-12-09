@@ -48,3 +48,5 @@ packages/modules/lib
 .idea/libraries/web_node_modules.xml
 .idea/jsLibraryMappings.xml
 .DS_Store
+.DS_Store
+yarn.lock

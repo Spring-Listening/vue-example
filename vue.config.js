@@ -1,6 +1,8 @@
 // vue.config.js 配置说明
 //官方vue.config.js 参考文档 https://cli.vuejs.org/zh/config/#css-loaderoptions
 // 这里只列一部分，具体配置参考文档
+const path = require('path');
+
 module.exports = {
   // 部署生产环境和开发环境下的URL。
   // 默认情况下，Vue CLI 会假设你的应用是被部署在一个域名的根路径上
@@ -31,15 +33,23 @@ module.exports = {
    *  有了map就可以像未加密的代码一样，准确的输出是哪一行哪一列有错。
    * */
   productionSourceMap: false,
- 
-  // 它支持webPack-dev-server的所有选项
+  lintOnSave: true,
+  configureWebpack:{
+    resolve:{
+      alias:{
+        "@":path.resolve(__dirname,'./src'),
+        "common":path.resolve(__dirname,'./src/common'),
+        "components":path.resolve(__dirname,'./src/components'),
+      }
+      
+    }
+  },
   devServer: {
     host: "localhost",
     port: 4000, // 端口号
     https: false, // https:{type:Boolean}
     open: true, //配置自动启动浏览器
     // proxy: 'http://localhost:4000' // 配置跨域处理,只有一个代理
- 
     // 配置多个代理
     proxy: {
       "/api": {
