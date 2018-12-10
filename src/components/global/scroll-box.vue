@@ -1,6 +1,6 @@
 <template>
   <div class="scroll-box" :style="{height:height,width:width}" id="div1">
-    <div class="scroll-content" id="ul1">
+    <div class="scroll-content" id="ul1" @touchmove="preventDefault">
       <slot></slot>
     </div>
     <div id="bar"></div>
@@ -226,6 +226,9 @@ export default {
     },
     now(){
       return Date.now();
+    },
+    preventDefault(e){
+      e.preventDefault()
     }
   }
 }
@@ -234,7 +237,11 @@ export default {
 .scroll-box{
   overflow: hidden;
   width: 100%;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 .scroll-content{
     position: absolute;
