@@ -10,6 +10,7 @@
       <div class="list black"></div>
       <div class="list green"></div>
     </scroll-box>
+    <!-- <native-scroll></native-scroll> -->
   </div>
 </template>
 
@@ -18,7 +19,7 @@ export default {
   name: 'home',
   data(){
     return{
-      hideBar:true,
+      hideBar:false,
     }
   },
   mounted(){

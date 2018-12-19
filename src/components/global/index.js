@@ -1,8 +1,10 @@
 
 import scrollBox from './scroll-box'
+import nativeScroll from './native-scroll'
 
 const components = {
-  scrollBox
+  scrollBox,
+  nativeScroll
 }
 
 const install = function (Vue) {
@@ -13,5 +15,6 @@ const install = function (Vue) {
 
 export {
   install,
-  scrollBox
+  scrollBox,
+  nativeScroll
 }
