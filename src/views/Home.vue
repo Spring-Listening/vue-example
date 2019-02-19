@@ -32,28 +32,32 @@ export default {
 </script>
 
 <style lang="less">
+.bg(@color){
+  background: @color;
+}
 .home{
   .list{
     height: 250px;
+    &.pink{
+      .bg(pink)
+    }
+    &.red{
+      .bg(red)
+    }
+    &.green{
+      .bg(green)
+    }
+    &.white{
+      height: 50px;
+      position: sticky;
+      top: 0;
+      .bg(blue)
+    }
+    &.black{
+      .bg(black)
+    }
   }
-  .pink{
-    background: pink;
-  }
-  .red{
-    background: red;
-  }
-  .green{
-    background: green;
-  }
-  .white{
-    height: 50px;
-    position: sticky;
-    top: 0;
-    background: #fff;
-  }
-  .black{
-    background: black;
-  }
+  
 }
 
 </style>
