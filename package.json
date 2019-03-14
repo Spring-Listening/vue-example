@@ -23,6 +23,7 @@
     "eslint-plugin-vue": "^5.0.0-0",
     "less": "^3.9.0",
     "less-loader": "^4.1.0",
+    "mint-ui": "^2.2.13",
     "path": "^0.12.7",
     "vue-template-compiler": "^2.5.17"
   },

@@ -17,5 +17,10 @@ export default new Router({
       name: 'about',
       component:() => import('@/views/About')
     },
+    {
+      path: '/loadmore',
+      name: 'loadmore',
+      component:() => import('@/views/loadmore')
+    },
   ]
 })
